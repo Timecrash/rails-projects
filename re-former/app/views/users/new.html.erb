@@ -1,0 +1,32 @@
+<h1>Users#new</h1>
+
+<%= render "user_form" %>
+
+<!--
+<%= form_tag "/users", method: "post" do %>
+  <%= label_tag "username", "Username: " %>
+  <%= text_field_tag "username" %><br>
+  <%= label_tag "email", "E-mail: " %>
+  <%= text_field_tag "email" %><br>
+  <%= label_tag "password", "Password: " %>
+  <%= text_field_tag "password" %><br>
+  <%= label_tag "password_confirmation", "Confirmation: " %>
+  <%= text_field_tag "password_confirmation" %><br>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+<div class="signup">
+  <form accept-charset="UTF-8" action="/users" method="post">
+    <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+    <label for="user[username]">Username:</label>
+    <input type="text" name="user[username]"><br>
+    <label for="user[email]">E-mail:</label>
+    <input type="text" name="user[email]"><br>
+    <label for="user[password]">Password:</label>
+    <input type="text" name="user[password]"><br>
+    <label for="user[password_confirmation]">Confirmation:</label>
+    <input type="text" name="user[password_confirmation]"><br>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+-->
