@@ -1,0 +1,25 @@
+<h1>The Treehouse Bulletin Board</h1>
+
+<ul class="posts">
+<% @posts.each do |post| %>
+  <li id="post-body"><%= post.text %></li>
+  <% if logged_in? %>
+    <ul>
+      <li id="post-author">Posted by: <b><%= post.user.name %></b></li>
+    </ul>
+  <% end %>
+<% end %>
+</ul>
+
+<div class="create-post">
+  <% if logged_in? %>
+  <%= link_to "Create post", new_post_path %>
+  <% end %>
+</div>
+
+<% if logged_in? %>
+  <p><%= "Currently signed in as #{current_user.name}." %><br>
+  <%= link_to "Log out", logout_path, method: "delete" %></p>
+<% else %>
+  <p><%= link_to "Log in", login_path %></p>
+<% end %>

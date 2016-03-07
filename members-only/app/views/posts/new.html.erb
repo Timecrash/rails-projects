@@ -1,0 +1,8 @@
+<h1>New Post</h1>
+
+<%= form_for @post do |f| %>
+  <p><%= f.label :text, "Post body:" %></p>
+  <p><%= f.text_area :text, cols: 100, rows: 30 %></p>
+  
+  <%= f.submit "Create post" %>
+<% end %>

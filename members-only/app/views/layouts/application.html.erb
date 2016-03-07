@@ -9,14 +9,7 @@
 <body>
 
 <% flash.each do |message_type, message| %>
-  <%= content_tag :div, message, :id => message_type %>
-<% end %>
-
-<% if logged_in? %>
-  <p><%= "Currently signed in as #{current_user.name}." %></p>
-  <p><%= link_to "Log out", logout_path %></p>
-<% else %>
-  <p><%= link_to "Log in", login_path %></p>
+  <%= content_tag(:div, message, class: "flash", id: message_type) %>
 <% end %>
 
 <%= yield %>

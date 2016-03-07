@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
     if @user && @user.authenticate(params[:session][:password])
       log_in(@user)
       flash[:success] = "Welcome to the Treehouse, #{@user.name}!"
-      #redirect_to root_path
+      redirect_to root_path
     else
       render 'new'
     end
@@ -16,6 +16,6 @@ class SessionsController < ApplicationController
   def destroy
     log_out if logged_in?
     flash[:success] = "You have logged out successfully."
-    #redirect_to root_path
+    redirect_to root_path
   end
 end

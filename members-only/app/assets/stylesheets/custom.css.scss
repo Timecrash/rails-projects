@@ -1,0 +1,26 @@
+h1, li, .flash, .create-post {
+  text-align: center;
+}
+
+.flash, #post-author {
+  font-style: italic;
+}
+  
+#success {
+  color: green;
+}
+  
+#danger {
+  color: maroon;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0px;
+}
+
+#post-body {
+  margin-top: 20px;
+  margin-left: 50px;
+  margin-right: 50px;
+}
