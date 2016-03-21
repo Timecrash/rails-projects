@@ -1,0 +1,15 @@
+h1, li, .flash {
+  text-align: center;
+}
+
+.flash, .current-user {
+  font-style: italic;
+}
+  
+#success {
+  color: green;
+}
+  
+#danger {
+  color: maroon;
+}
