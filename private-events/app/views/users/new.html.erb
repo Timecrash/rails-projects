@@ -1,0 +1,13 @@
+<h1 align="center">Sign Up</h1>
+
+<%= form_for @user do |f| %>
+<table align="center">
+  <tr>
+    <td><%= f.label :name %></td>
+    <td><%= f.text_field :name %></td>
+  </tr>
+  <tr>
+    <td><%= f.submit "Sign Up" %></td>
+  </tr>
+</table>
+<% end %>
