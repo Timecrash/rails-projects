@@ -1,4 +1,4 @@
-h1, li, .flash {
+h1, .flash {
   text-align: center;
 }
 
@@ -12,4 +12,18 @@ h1, li, .flash {
   
 #danger {
   color: maroon;
+}
+
+.events li {
+  font-weight: bold;
+}
+
+.event-details {
+  padding-left: 0px;
+  
+  li {
+  list-style-type: none;
+  font-weight: normal;
+  font-style: italic;
+  }
 }
