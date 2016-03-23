@@ -1,0 +1,9 @@
+<header>
+  <% if logged_in? %>
+    <p class="current-user">Currently signed in as <%= link_to current_user.name,
+                                                       user_path(current_user) %>.<br>
+    <%= link_to "Log out", logout_path, method: "delete" %></p>
+  <% else %>
+    <p><%= link_to "Log in", login_path %></p>
+  <% end %>
+</header>

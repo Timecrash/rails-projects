@@ -1,0 +1,21 @@
+<div class="upcoming">
+  <h3>Upcoming events (<%= @upcoming_events.count %>):</h3>
+  <% if @upcoming_events.any? %>
+    <ul class="events">
+      <% @upcoming_events.each do |event| %>
+        <%= render 'shared/event_info', event: event %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>
+
+<div class="previous">
+  <h3>Previous events (<%= @previous_events.count %>):</h3>
+  <% if @previous_events.any? %>
+    <ul class="events">
+      <% @previous_events.each do |event| %>
+        <%= render 'shared/event_info', event: event %>
+      <% end %>
+    </ul>
+  <% end %>
+</div>

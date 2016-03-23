@@ -2,6 +2,10 @@ h1, .flash {
   text-align: center;
 }
 
+header, footer {
+  margin: 20px;
+}
+
 .flash, .current-user {
   font-style: italic;
 }
@@ -14,16 +18,43 @@ h1, .flash {
   color: maroon;
 }
 
-.events li {
+.events {
+  margin-top: 10px;
+  
+  li {
   font-weight: bold;
+  }
 }
 
 .event-details {
   padding-left: 0px;
+  margin-bottom: 10px;
   
   li {
   list-style-type: none;
   font-weight: normal;
   font-style: italic;
   }
+}
+
+.container div {
+  margin-right: 20px;
+}
+
+.created, .upcoming, .previous {
+  display: inline-block;
+}
+
+.created {
+  position: relative;
+  float: left;
+}
+
+.previous {
+  position: absolute;
+}
+
+footer {
+  bottom: 0%;
+  position: fixed;
 }

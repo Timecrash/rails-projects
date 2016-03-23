@@ -1,0 +1,14 @@
+<h1><%= @event.description %></h1>
+
+<h3>Hosted by <%= link_to @event.creator.name, user_path(@event.creator) %></h3>
+<h4>
+  at the <%= @event.location %><br />
+  <%= @event.date.strftime("%A, %B %e, at %l:%M %p") %>
+</h4>
+
+<p>Attendees (<%= @event.attendees.count %>)</p>
+<ul>
+  <% @event.attendees.each do |attendee| %>
+    <li><%= link_to attendee.name, user_path(attendee) %></li>
+  <% end %>
+</ul>

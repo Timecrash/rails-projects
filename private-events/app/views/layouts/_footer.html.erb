@@ -1,0 +1,9 @@
+<footer>
+  <% if logged_in? %>
+    <%= link_to "Create an event", new_event_path %>
+  <% else %>
+    <%= link_to "Sign Up", new_user_path %>
+  <% end %>
+  <br>
+  <%= link_to "Back to Home", root_path %>
+</footer>

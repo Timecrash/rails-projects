@@ -1,8 +1,16 @@
 <h1><%= @user.name %></h1>
 
-<h3>Hosted events (<%= @user.events.count %>):</h3>
-<% if @user.events.any? %>
-  <ul class="events">
-    <%= render @events %>
-  </ul>
-<% end %>
+<div class="container">
+  <div class="created">
+    <h3>Hosted events (<%= @created_events.count %>):</h3>
+    <% if @created_events.any? %>
+      <ul class="events">
+        <% @created_events.each do |event| %>
+          <%= render 'shared/event_info', event: event %>
+        <% end %>
+      </ul>
+    <% end %>
+  </div>
+  
+  <%= render 'shared/event' %>
+</div>

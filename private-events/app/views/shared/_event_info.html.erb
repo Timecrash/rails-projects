@@ -1,0 +1,8 @@
+<li>
+  <%= link_to event.description, event_path(event) %>
+  <ul class="event-details">
+    <li>Hosted by <%= event.creator.name %></li>
+    <li>at the <%= event.location %></li>
+    <li><%= event.date.strftime("%A, %B %e, at %l:%M %p") %></li>
+  </ul>
+</li>

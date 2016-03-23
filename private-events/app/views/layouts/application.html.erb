@@ -8,13 +8,7 @@
 </head>
 <body>
 
-<% if logged_in? %>
-  <p class="current-user">Currently signed in as <%= link_to current_user.name,
-                                                     user_path(current_user) %>.<br>
-  <%= link_to "Log out", logout_path, method: "delete" %></p>
-<% else %>
-  <p><%= link_to "Log in", login_path %></p>
-<% end %>
+<%= render 'layouts/header' %>
 
 <% flash.each do |message_type, message| %>
   <%= content_tag(:div, message, class: "flash", id: message_type) %>
@@ -22,8 +16,7 @@
 
 <%= yield %>
 
-<footer>
-  <%= link_to "Back to Home", root_path %>
-</footer>
+<%= render 'layouts/footer' %>
+
 </body>
 </html>
