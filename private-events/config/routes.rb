@@ -5,5 +5,9 @@ Rails.application.routes.draw do
   delete  'logout'  => 'sessions#destroy'
 
   resources :users,  only: [:new, :show, :create]
-  resources :events, only: [:index, :show, :new, :create]
+  
+  post '/events/:event_id/invites/new' => 'invites#create'
+  resources :events, only: [:index, :show, :new, :create] do
+    resources :invites, only: :new
   end
+end
