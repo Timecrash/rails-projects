@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  departing: 1
+  arriving: 1
+  takeoff: 2016-03-31 17:59:44
+  duration: 1
+
+two:
+  departing: 1
+  arriving: 1
+  takeoff: 2016-03-31 17:59:44
+  duration: 1
