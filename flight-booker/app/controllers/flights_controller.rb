@@ -12,9 +12,14 @@ class FlightsController < ApplicationController
   private
   
   def find_flights
-    @flights = Flight.where(departing: params[:from],
-                            arriving:  params[:to],
-                            takeoff:   correct_date(params[:date]))
+    if params[:date]= ""
+      @flights = Flight.where(departing: params[:from],
+                              arriving:  params[:to])
+    else
+      @flights = Flight.where(departing: params[:from],
+                              arriving:  params[:to],
+                              takeoff:   correct_date(params[:date]))
+    end
   end
 
   def correct_date(date)

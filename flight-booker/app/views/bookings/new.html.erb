@@ -1,0 +1,26 @@
+<h1>Booking Flight #<%= params[:flight_id] %></h1>
+
+<%= form_for @booking do |b| %>
+  <% if @booking.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@booking.errors.count, "error") %> 
+      </h2>
+      <ul>
+        <% @booking.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <%= b.hidden_field :flight_id, value: params[:flight_id].to_i %>
+  <h2>Passenger Information</h2>
+    <%= b.fields_for :passengers do |pass_form| %>
+      <%= pass_form.label :name %>
+      <%= pass_form.text_field :name %><br />
+      <%= pass_form.label :email, "E-Mail" %>
+      <%= pass_form.email_field :email %><br />
+      <br />
+    <% end %>
+  <%= b.submit "Create Booking" %>
+<% end %>

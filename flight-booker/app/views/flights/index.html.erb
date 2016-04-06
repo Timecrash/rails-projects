@@ -16,23 +16,28 @@
 
 <% if @flights %>
   <h3>Flights Found:</h3>
-  <table border="1">
-    <tr>
-      <th>Flight #</th>
-      <th>Departing From</th>
-      <th>Arriving To</th>
-      <th>Takeoff</th>
-      <th>Duration</th>
-      <th>Book this Flight</th>
-    </tr>
-    <% @flights.each do |flight| %>
+  <%= form_tag new_booking_path, method: :get do %>
+    <%= hidden_field_tag :passengers, params[:passengers] %>
+    <table border="1">
       <tr>
-        <td><%= flight.id %></td>
-        <td><%= flight.departing.code %></td>
-        <td><%= flight.arriving.code %></td>
-        <td><%= flight.takeoff.strftime("%A, %B %e, %Y") %></td>
-        <td><%= flight.duration %> Hours</td>
+        <th>Flight #</th>
+        <th>Departing From</th>
+        <th>Arriving To</th>
+        <th>Takeoff</th>
+        <th>Duration</th>
+        <th>Select Flight</th>
       </tr>
-    <% end %>
-  </table>
+      <% @flights.each do |flight| %>
+        <tr>
+          <td><%= flight.id %></td>
+          <td><%= flight.departing.code %></td>
+          <td><%= flight.arriving.code %></td>
+          <td><%= flight.takeoff.strftime("%A, %B %e, %Y") %></td>
+          <td><%= flight.duration %> Hours</td>
+          <td><%= radio_button_tag :flight_id, flight.id %> </td>
+        </tr>
+      <% end %>
+    </table>
+    <%= submit_tag "Book Flights" %>
+  <% end %>
 <% end %>
