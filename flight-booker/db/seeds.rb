@@ -1,6 +1,3 @@
-Airport.delete_all
-Flight.delete_all
-
 Airport.create!([{code: "SFO", name: "San Fransisco"},
                  {code: "NYC", name: "New York City"},
                  {code: "LON", name: "London"},

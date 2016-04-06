@@ -1,0 +1,38 @@
+<h1>Flight Booker</h1>
+
+<%= form_tag flights_path, method: :get do %>
+  <%= hidden_field_tag :search %>
+  <h2>Search for Flights</h2>
+  
+  <%= select_tag :from,       options_for_select(@airports), prompt: "From" %>
+  <%= select_tag :to,         options_for_select(@airports), prompt: "To" %>
+  <%= select_tag :passengers, options_for_select([1,2,3,4]), prompt: "Passengers" %>
+  <%= select_tag :date,       options_for_select(@dates),    prompt: "Dates" %>
+  
+  <%= submit_tag "Find Flights" %>
+<% end %>
+
+<br />
+
+<% if @flights %>
+  <h3>Flights Found:</h3>
+  <table border="1">
+    <tr>
+      <th>Flight #</th>
+      <th>Departing From</th>
+      <th>Arriving To</th>
+      <th>Takeoff</th>
+      <th>Duration</th>
+      <th>Book this Flight</th>
+    </tr>
+    <% @flights.each do |flight| %>
+      <tr>
+        <td><%= flight.id %></td>
+        <td><%= flight.departing.code %></td>
+        <td><%= flight.arriving.code %></td>
+        <td><%= flight.takeoff.strftime("%A, %B %e, %Y") %></td>
+        <td><%= flight.duration %> Hours</td>
+      </tr>
+    <% end %>
+  </table>
+<% end %>
