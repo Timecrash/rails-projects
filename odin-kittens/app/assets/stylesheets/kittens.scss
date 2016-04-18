@@ -1,0 +1,27 @@
+// Place all the styles related to the kittens controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+table {
+  text-align: center;
+}
+
+th h3 {
+  margin: 0px;
+}
+
+td {
+  padding: 5px;
+}
+
+.flash {
+  font-style: italic;
+}
+
+#success {
+  color: green;
+}
+
+#error {
+  color: red;
+}

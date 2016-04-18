@@ -1,0 +1,7 @@
+<h1><%= @kitten.name %></h1>
+
+<h3>Age: <%= pluralize(@kitten.age, 'year') %></h3>
+<h3>Cuteness: <%= @kitten.cuteness %></h3>
+<h3>Softness: <%= @kitten.softness %></h3>
+
+<%= link_to "Return", root_path %>

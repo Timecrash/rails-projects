@@ -1,0 +1,24 @@
+<h1>The Kittens API</h1>
+
+<table>
+  <tr>
+    <th><h3>Name</h3></th>
+    <th><h3>Age</h3></th>
+    <th><h3>Cuteness</h3></th>
+    <th><h3>Softness</h3></th>
+  </tr>
+  <% @kittens.each do |kitten| %>
+  <tr>
+      <td><%= link_to kitten.name, kitten_path(kitten) %></td>
+      <td><%= pluralize(kitten.age, 'year') %></td>
+      <td><%= kitten.cuteness %></td>
+      <td><%= kitten.softness %></td>
+      <td><%= link_to "Edit", edit_kitten_path(kitten) %></td>
+      <td><%= link_to "Remove", kitten_path(kitten), data: { :confirm => "Are you sure?" },
+                                :method => :delete %></td>
+  </tr>
+  <% end %>
+</table>
+
+<br />
+<%= link_to "Add New Kitten", new_kitten_path %>
