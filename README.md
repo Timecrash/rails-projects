@@ -9,3 +9,4 @@ Projects include:
 - private-events (via TOP's [Active Record Associations](http://www.theodinproject.com/ruby-on-rails/associations))
 - flight-booker (via TOP's [Advanced Forms](http://www.theodinproject.com/ruby-on-rails/building-advanced-forms))
 - odin-kittens (via TOP's [Building and Using APIs](http://www.theodinproject.com/ruby-on-rails/apis))
+- flickr-sidebar (as above)
