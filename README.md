@@ -7,4 +7,5 @@ Projects include:
 - re-former (via TOP's [Forms](http://www.theodinproject.com/ruby-on-rails/forms))
 - members-only (via TOP's [Authentication](http://www.theodinproject.com/ruby-on-rails/authentication))
 - private-events (via TOP's [Active Record Associations](http://www.theodinproject.com/ruby-on-rails/associations))
-- flight-booker (via TOP's [Advanced Forms](http://www.theodinproject.com/ruby-on-rails/building-advanced-forms)
+- flight-booker (via TOP's [Advanced Forms](http://www.theodinproject.com/ruby-on-rails/building-advanced-forms))
+- odin-kittens (via TOP's [Building and Using APIs](http://www.theodinproject.com/ruby-on-rails/apis))
