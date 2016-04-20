@@ -13,6 +13,9 @@ class BookingsController < ApplicationController
   def create
     @booking = Booking.new(booking_params)
     if @booking.save
+      @booking.passengers.each do |p|
+        PassengerMailer.thank_you(p, @booking.flight).deliver
+      end
       flash[:success] = "Flight successfully booked!"
       redirect_to booking_path(@booking)
     else
@@ -24,6 +27,7 @@ class BookingsController < ApplicationController
   
   private
   def booking_params
-    params.require(:booking).permit(:flight_id, passengers_attributes: [:name, :email])
+    params.require(:booking).permit(:flight_id,
+                                    passengers_attributes: [:name, :email])
   end
 end
