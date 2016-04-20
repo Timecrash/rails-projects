@@ -1,12 +1,12 @@
 Flight <%= @flight.id %> booked
 ===============================
 
-Dear <%= @user.name %>,
+Dear <%= @passenger.name %>,
 You have successfully booked passage on flight <%= @flight.id %>,
 departing from <%= @flight.departing.name %>,
 and arriving in <%= @flight.arriving.name %>.
 
-Takeoff is <%= @flight.takeoff.strftime("%A, %B %e, %Y") %>
+Takeoff is <%= @flight.takeoff.strftime("%A,%B %e, %Y") %>
 at <%= @flight.takeoff.strftime("%r") %>.
 
 Thank you for your booking!

@@ -6,13 +6,13 @@
   <body>
     <h1>Flight <%= @flight.id %> booked</h1>
     <p>
-      Dear <%= @user.name %>,
+      Dear <%= @passenger.name %>,
       You have successfully booked passage on flight <%= @flight.id %>,
       departing from <%= @flight.departing.name %>,
       and arriving in <%= @flight.arriving.name %>.<br>
     </p>
     <p>
-      Takeoff is <%= @flight.takeoff.strftime("%A, %B %e, %Y") %>
+      Takeoff is <%= @flight.takeoff.strftime("%A,%B %e, %Y") %>
       at <%= @flight.takeoff.strftime("%r") %>.
     </p>
     <p>Thank you for your booking!</p>
