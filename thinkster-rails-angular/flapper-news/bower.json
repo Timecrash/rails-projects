@@ -1,0 +1,17 @@
+{
+  "name": "flapper-news",
+  "homepage": "https://github.com/Timecrash/rails-projects",
+  "authors": [
+    "Timecrash <mzvelez75@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
