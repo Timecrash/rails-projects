@@ -4,6 +4,12 @@ angular.module('flapperNews')
     posts: []
   };
   
+  o.get = function(id) {
+    return $http.get('/posts/' + id + '.json').then(function(res) {
+      return res.data;
+    });
+  };
+  
   o.getAll = function() {
     return $http.get('/posts.json').success(function(data) {
       angular.copy(data, o.posts);
@@ -15,5 +21,12 @@ angular.module('flapperNews')
       o.posts.push(data);
     });
   };
+  
+  o.upvote = function(post) {
+    return $http.put('/posts/' + post.id + '/upvote.json').success(function(data) {
+      post.upvotes += 1;
+    });
+  };
+  
   return o;
 }]);

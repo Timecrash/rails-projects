@@ -9,7 +9,7 @@ Rails.application.routes.draw do
     end
     
     member do
-      put '/upvote' => 'comments#upvote'
+      put '/upvote' => 'posts#upvote'
     end
   end
 end
