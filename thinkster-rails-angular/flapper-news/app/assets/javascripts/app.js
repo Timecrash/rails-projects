@@ -1,4 +1,4 @@
-angular.module('flapperNews', ['ui.router'])
+angular.module('flapperNews', ['ui.router', 'templates'])
 .config([
   '$stateProvider',
   '$urlRouterProvider',
